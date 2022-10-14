@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# loops from 1-10 displaying 'bad luck', 'good luck', 'Best School'
+
+index=0
+while [ $index -lt 10 ]
+do
+	if [ $index -eq 3 ]
+	then
+		echo "bad luck"
+	elif [ $index -eq 7 ]
+	then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	(( index++ ))
+done
