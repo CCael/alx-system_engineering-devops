@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# displays numbers from 1 to 20
+
+index=1
+while [ $index -le 20 ]
+do
+	echo "$index"
+	case $index in
+		"4") echo "bad luck from China";;
+		"9") echo "bad luck from Japan";;
+		"17") echo "bad luck from Italy";;
+	esac
+	(( index++ ))
+done
