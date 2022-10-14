@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-# displays numbers from 1 to 20
+# displays numbers from 1 to 20 in addition to:
+# 	bad luck from China for the 4th loop iteration
+#	bad luck from Japan for the 9th loop iteration
+#	bad luck from Italy for the 17th loop iteration
 
 index=1
 while [ $index -le 20 ]
