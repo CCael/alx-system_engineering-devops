@@ -4,6 +4,6 @@
 index=0
 while [ $index -lt 10 ]
 do
-  echo "Best School"
-  ((index++))
+	echo "Best School"
+	((index++))
 done
