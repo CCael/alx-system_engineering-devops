@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Outputs Best School 10 times using until
+
+index=0
+until [ $index -eq 10 ]
+do
+	echo "Best School"
+	((index++))
+done
