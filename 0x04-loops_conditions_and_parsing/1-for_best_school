@@ -2,5 +2,5 @@
 # Outputs "Best School" 10 times in stdout
 for (( i=0, i<10, i++ ))
 do
-   echo "Best School"
+	echo "Best School"
 done
