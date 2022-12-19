@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# install ngnix on my web-01
+# Nginx should be listening on port 80
+sudo apt-get -y update
+sudo apt-get -y install ngnix
+sudo ufw allow 'Ngnix HTTP'
+echo 'Hello World!' > /var/www/html/index.html
+sudo service ngnix start

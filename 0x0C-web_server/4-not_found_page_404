@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# Configures NGNIX server to have a custon 404 page containing a string
+sudo apt-get -y update
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP
+
+# configures redirection
+sed -i '/listen 80 default_server;/a rewrite ^/redirect_me$ https://www.youtube.com/watch?v=QH2-TGUlwu4 permanent;\n' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" > /var/www/html/custom_404.html
+
+# creates a custom error 404 page
+sed -i '/listen 80 default_server;/a error_page 404 /custom_404.html;\nlocation /custom_404.html {\n\tinternal;\n}\n' /etc/nginx/sites-available/default
+
+sudo service nginx start
